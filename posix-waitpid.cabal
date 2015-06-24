@@ -9,7 +9,9 @@ author:              Richard Smith
 maintainer:          zygoloid@metafoo.co.uk
 build-type:          Simple
 cabal-version:       >= 1.6
-build-depends:       base == 4.*, unix
-c-sources:           System/Posix/waitpid_c.c
-exposed-modules:     System.Posix.Waitpid
-extensions:          ForeignFunctionInterface
+
+library
+  build-depends:       base == 4.*, unix
+  c-sources:           System/Posix/waitpid_c.c
+  exposed-modules:     System.Posix.Waitpid
+  extensions:          ForeignFunctionInterface
